@@ -25,9 +25,9 @@ shift + lalt - k : yabai -m window --resize up:-20:0
 # toggle window split type
 alt - v : yabai -m window --toggle split
 
-.blacklist [
-    "code"
-]
+# .blacklist [
+#     "code"
+# ]
 
 # move managed window
 # shift + cmd - h : yabai -m window --warp east
