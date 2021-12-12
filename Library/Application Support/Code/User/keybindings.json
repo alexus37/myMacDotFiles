@@ -69,7 +69,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+up",
+        "key": "shift+cmd+up",
         "command": "editor.action.insertCursorAbove",
         "when": "editorTextFocus"
     },
@@ -79,7 +79,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+down",
+        "key": "shift+cmd+down",
         "command": "editor.action.insertCursorBelow",
         "when": "editorTextFocus"
     },
@@ -87,5 +87,30 @@
         "key": "alt+cmd+down",
         "command": "-editor.action.insertCursorBelow",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "-workbench.action.terminal.selectToPreviousCommand",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "-cursorTopSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "-list.collapseAll",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "-workbench.action.terminal.selectToNextCommand",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "-cursorBottomSelect",
+        "when": "textInputFocus"
     }
 ]
