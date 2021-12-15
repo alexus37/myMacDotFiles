@@ -36,6 +36,8 @@ shift + lalt - 7 : yabai -m window --space 7
 shift + lalt - 8 : yabai -m window --space 8
 shift + lalt - 9 : yabai -m window --space 9
 
+# open google chrom 
+lalt - g : open -a /Applications/Google\ Chrome.app
  
 
 # move managed window
