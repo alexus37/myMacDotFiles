@@ -39,7 +39,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+/",
+        "key": "cmd+/",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -112,5 +112,10 @@
         "key": "shift+cmd+down",
         "command": "-cursorBottomSelect",
         "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-toggleExplainMode",
+        "when": "suggestWidgetVisible"
     }
 ]
