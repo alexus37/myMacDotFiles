@@ -14,3 +14,8 @@ $HOME/.fzf/install --bin
 if [[ "$(command -v pip3)" ]]; then     
     pip3 install --user thefuck; 
 fi 
+
+# copy all the files
+cat .zshrc > $HOME/.zshrc
+cp .fzf.zsh $HOME/.fzf.zsh
+cp .vimrc $HOME/.vimrc
