@@ -8,5 +8,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 
-~/.fzf/install
-pip3 install --user thefuck
+$HOME/.fzf/install --bin
+
+if [[ "$(command -v pip3)" ]]; then     
+    pip3 install --user thefuck; 
+fi
