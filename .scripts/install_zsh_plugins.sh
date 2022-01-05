@@ -12,4 +12,4 @@ $HOME/.fzf/install --bin
 
 if [[ "$(command -v pip3)" ]]; then     
     pip3 install --user thefuck; 
-fi
+fi 
