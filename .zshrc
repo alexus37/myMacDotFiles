@@ -31,7 +31,9 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
 
-eval $(thefuck --alias)
+if [[ "$(command -v thefuck)" ]]; then
+  eval $(thefuck --alias)
+fi
 
 
 
