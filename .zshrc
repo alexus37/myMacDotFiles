@@ -24,7 +24,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias openpdf='xdg-open'
-
+alias connectGithubCodespace='ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null root@localhost
+'
 alias openimg="eog"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true

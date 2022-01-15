@@ -32,7 +32,7 @@ set hlsearch
 " show search results as you type"
 set incsearch 
 " Remove newbie crutches in Command Mode"
-cnoremap <Down> <Nop>
-cnoremap <Left> <Nop>
-cnoremap <Right> <Nop>
-cnoremap <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>

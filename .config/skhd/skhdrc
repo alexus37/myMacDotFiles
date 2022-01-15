@@ -38,5 +38,5 @@ shift + lalt - 9 : yabai -m window --space 9
 
 # open google chrome 
 lalt - g : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
-lalt - e : open -a 'Finder.app'
+lalt - e : open -a /Applications/Commander\ One.app
 lalt - return: open -a Terminal ~
