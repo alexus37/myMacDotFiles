@@ -23,3 +23,4 @@ fi
 cat .zshrc > $HOME/.zshrc
 cp .fzf.zsh $HOME/.fzf.zsh
 cp .vimrc $HOME/.vimrc
+chsh -s /usr/bin/zsh $USERNAME
