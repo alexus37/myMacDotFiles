@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 export FZF_BASE=$HOME/.fzf
-plugins=(git colorize npm pip python debian zsh-z zsh-syntax-highlighting zsh-autosuggestions fzf k)
+plugins=(fzf-tab git colorize npm pip python debian zsh-z zsh-syntax-highlighting zsh-autosuggestions fzf k )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +27,10 @@ alias openpdf='xdg-open'
 alias connectGithubCodespace='ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null root@localhost
 '
 alias openimg="eog"
+alias rt='bin/rails test'
+alias rc='bin/rails c'
 
+git config --global core.editor "vim"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
