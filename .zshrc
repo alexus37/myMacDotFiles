@@ -46,8 +46,11 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export CC=gcc
 export CXX=g++
+export GH_GH_PAT=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
+
 
 HOSTNAME="$(hostname)"  # Conda clobbers HOST, so we save the real hostname into another variable.
+EDITOR="nvim"
 
 precmd() {
     OLDHOST="${HOST}"
