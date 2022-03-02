@@ -24,11 +24,15 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias openpdf='xdg-open'
-alias connectGithubCodespace='ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null root@localhost
-'
+alias connectGithubCodespace='ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null root@localhost'
+alias portsForwardCodespace='gh codespace ports forward 80:80 2222:2222 3003:3003 3033:3033 3034:3034 3035:3035 3306:3306 8025:8025 9092:9092 9293:9293 15000:15000 15001:15001 15306:15306 18081:18081 8091:8091 9002:9002 28081:28081 9200:9200 40427:40427 45621:45621 35317:35317 45939:45939 43577:43577 33207:33207 38081:38081'
+
 alias openimg="eog"
 alias rt='bin/rails test'
 alias rc='bin/rails c'
+alias e='nvim'
+alias rgrb='rg -g "*.rb"'
+alias rgts='rg -g "*.ts"'
 
 git config --global core.editor "vim"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -39,14 +43,11 @@ if [[ "$(command -v thefuck)" ]]; then
   eval $(thefuck --alias)
 fi
 
-
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export CC=gcc
 export CXX=g++
-export GH_GH_PAT=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
 
 
 HOSTNAME="$(hostname)"  # Conda clobbers HOST, so we save the real hostname into another variable.
