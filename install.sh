@@ -1,6 +1,8 @@
 #!/bin/bash
+echo "Start install dotfiles"
 current_dir=$(pwd)
 
+echo "Download zsh plugins"
 # install zsh plugins
 git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -25,10 +27,11 @@ mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
 # nvim setup
+echo "nvim setup"
 apt install npm ruby-dev -y
 npm install -g prettier 
 
-git clone https://github.com/alexus37/nvim.git $HOME/.config
+git clone https://github.com/alexus37/nvim.git $HOME/.config/nvim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 
