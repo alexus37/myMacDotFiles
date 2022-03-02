@@ -1,4 +1,5 @@
 #!/bin/bash
+current_dir=$(pwd)
 
 # install zsh plugins
 git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
@@ -40,7 +41,7 @@ ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 
 # copy all the files
-cat .zshrc > $HOME/.zshrc
-cp .fzf.zsh $HOME/.fzf.zsh
-cp .vimrc $HOME/.vimrc
+cat $current_dir/.zshrc > $HOME/.zshrc
+cp $current_dir/.fzf.zsh $HOME/.fzf.zsh
+cp $current_dir/.vimrc $HOME/.vimrc
 chsh -s /usr/bin/zsh $USERNAME
