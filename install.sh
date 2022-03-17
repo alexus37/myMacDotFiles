@@ -28,8 +28,9 @@ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Co
 
 # nvim setup
 echo "nvim setup"
-apt install npm ruby-dev -y
-npm install -g prettier 
+apt install ruby-dev -y
+# npm install -g typescript typescript-language-server eslint prettier eslint_d 
+# npm i -g vscode-langservers-extracted
 
 git clone https://github.com/alexus37/nvim.git $HOME/.config/nvim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
