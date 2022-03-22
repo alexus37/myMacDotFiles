@@ -48,4 +48,5 @@ ln -s /squashfs-root/AppRun /usr/bin/nvim
 cat $current_dir/.zshrc > $HOME/.zshrc
 cp $current_dir/.fzf.zsh $HOME/.fzf.zsh
 cp $current_dir/.vimrc $HOME/.vimrc
+cp $current_dir/.pryrc $HOME/.pryrc
 chsh -s /usr/bin/zsh $USERNAME
