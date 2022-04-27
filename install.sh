@@ -32,7 +32,7 @@ cp $current_dir/.vimrc $HOME/.vimrc
 cp $current_dir/.pryrc $HOME/.pryrc
 
 echo "Change default shell to zsh"
-sudo chsh -s /usr/bin/zsh $USERNAME
+sudo chsh -s /usr/bin/zsh vscode
 
 # nvim setup
 echo "nvim setup"
