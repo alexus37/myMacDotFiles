@@ -26,6 +26,13 @@ fi
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
+# copy all the files
+cat $current_dir/.zshrc > $HOME/.zshrc
+cp $current_dir/.fzf.zsh $HOME/.fzf.zsh
+cp $current_dir/.vimrc $HOME/.vimrc
+cp $current_dir/.pryrc $HOME/.pryrc
+chsh -s /usr/bin/zsh $USERNAME
+
 # nvim setup
 echo "nvim setup"
 apt install ruby-dev -y
@@ -46,9 +53,3 @@ mv squashfs-root /
 ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 
-# copy all the files
-cat $current_dir/.zshrc > $HOME/.zshrc
-cp $current_dir/.fzf.zsh $HOME/.fzf.zsh
-cp $current_dir/.vimrc $HOME/.vimrc
-cp $current_dir/.pryrc $HOME/.pryrc
-chsh -s /usr/bin/zsh $USERNAME
