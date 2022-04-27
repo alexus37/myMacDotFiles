@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Start install dotfiles"
+echo "Start install dotfiles as $USERNAME"
 current_dir=$(pwd)
 
 echo "Download zsh plugins"
@@ -12,25 +12,26 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fzf-tab
 
+echo "Installing FZF"
 $HOME/.fzf/install --bin
 
+echo "Installing thefuck"
 if [[ "$(command -v pip3)" ]]; then     
     pip3 install --user thefuck; 
 fi 
 
-if [[ "$(command -v apt)" ]]; then     
-    sudo apt install vim -y
-fi 
 
-# Install nerd font
+echo "Install nerd font"
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
-# copy all the files
+echo  "copy all zsh files"
 cat $current_dir/.zshrc > $HOME/.zshrc
 cp $current_dir/.fzf.zsh $HOME/.fzf.zsh
 cp $current_dir/.vimrc $HOME/.vimrc
 cp $current_dir/.pryrc $HOME/.pryrc
+
+echo "Change default shell to zsh"
 chsh -s /usr/bin/zsh $USERNAME
 
 # nvim setup
