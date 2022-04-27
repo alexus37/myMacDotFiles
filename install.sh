@@ -32,15 +32,13 @@ cp $current_dir/.vimrc $HOME/.vimrc
 cp $current_dir/.pryrc $HOME/.pryrc
 
 echo "Change default shell to zsh"
-chsh -s /usr/bin/zsh $USERNAME
+sudo chsh -s /usr/bin/zsh $USERNAME
 
 # nvim setup
 echo "nvim setup"
-apt install ruby-dev -y
+sudo apt install ruby-dev -y
 # install npm require for lsp 
-curl https://www.npmjs.com/install.sh | sh
-# npm install -g typescript typescript-language-server eslint prettier eslint_d 
-# npm i -g vscode-langservers-extracted
+curl https://www.npmjs.com/install.sh | sudo sh
 
 git clone https://github.com/alexus37/nvim.git $HOME/.config/nvim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -50,7 +48,7 @@ chmod u+x nvim.appimage
 ./squashfs-root/AppRun --version
 
 # Optional: exposing nvim globally.
-mv squashfs-root /
-ln -s /squashfs-root/AppRun /usr/bin/nvim
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 
