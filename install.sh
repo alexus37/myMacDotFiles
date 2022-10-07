@@ -30,6 +30,7 @@ cat $current_dir/.zshrc > $HOME/.zshrc
 cp $current_dir/.fzf.zsh $HOME/.fzf.zsh
 cp $current_dir/.vimrc $HOME/.vimrc
 cp $current_dir/.pryrc $HOME/.pryrc
+cp $current_dir/.tmux.conf $HOME/.tmux.conf
 
 echo "Change default shell to zsh"
 sudo chsh -s /usr/bin/zsh vscode
