@@ -24,10 +24,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias openpdf='xdg-open'
-alias connectGithubCodespace='ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null root@localhost'
+alias connectGithubCodespace='ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null vscode@localhost'
 alias portsForwardCodespace='gh codespace ports forward 80:80 2222:2222 3003:3003 3033:3033 3034:3034 3035:3035 3306:3306 8025:8025 9092:9092 9293:9293 15000:15000 15001:15001 15306:15306 18081:18081 8091:8091 9002:9002 28081:28081 9200:9200 40427:40427 45621:45621 35317:35317 45939:45939 43577:43577 33207:33207 38081:38081'
 alias killPort='kill -9 $(lsof -t -i:$1)'
-
+alias prodShell='ssh -A -J bastion.githubapp.com shell.service.ac4-iad.github.net'
 alias openimg="eog"
 alias rt='bin/rails test'
 alias rc='bin/rails c'
@@ -70,5 +70,13 @@ mkcdir ()
       cd -P -- "$1"
 }
 
-PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+PATH=/Users/ax/Library/Python/3.8/bin:/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# 
+if [[ -r "$HOME/.rvm/scripts/rvm" ]]; then
+  source $HOME/.rvm/scripts/rvm
+fi

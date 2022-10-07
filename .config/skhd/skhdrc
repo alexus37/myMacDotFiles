@@ -35,6 +35,7 @@ shift + lalt - 6 : yabai -m window --space 6
 shift + lalt - 7 : yabai -m window --space 7
 shift + lalt - 8 : yabai -m window --space 8
 shift + lalt - 9 : yabai -m window --space 9
+shift + lalt - 0 : yabai -m window --space 10
 
 # open google chrome 
 lalt - g : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
