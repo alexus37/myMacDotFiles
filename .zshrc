@@ -35,6 +35,11 @@ alias e='nvim'
 alias rgrb='rg -g "*.rb"'
 alias rgts='rg -g "*.ts"'
 
+# required for gh codespace bin generate service files
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 git config --global core.editor "vim"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
