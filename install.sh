@@ -52,4 +52,7 @@ chmod u+x nvim.appimage
 sudo mv squashfs-root /
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
-
+# git settings
+git config pull.rebase false
+git config --global user.email "alexus37@github.com"
+git config --global user.name "Alexander Lelidis"
