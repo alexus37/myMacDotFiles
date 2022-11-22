@@ -56,3 +56,9 @@ sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 git config pull.rebase false
 git config --global user.email "alexus37@github.com"
 git config --global user.name "Alexander Lelidis"
+
+echo "Install lazy git"
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"v*([^"]+)".*/\1/')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+
