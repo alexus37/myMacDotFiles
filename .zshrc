@@ -34,6 +34,7 @@ alias rc='bin/rails c'
 alias e='nvim'
 alias rgrb='rg -g "*.rb"'
 alias rgts='rg -g "*.ts"'
+alias gcamp='gcam $1 && ggp'
 
 # required for gh codespace bin generate service files
 export LANG=en_US.UTF-8
@@ -45,9 +46,6 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
 
-if [[ "$(command -v thefuck)" ]]; then
-  eval $(thefuck --alias)
-fi
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -83,3 +81,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if [[ -r "$HOME/.rvm/scripts/rvm" ]]; then
   source $HOME/.rvm/scripts/rvm
 fi
+eval "$(github-copilot-cli alias -- "$0")"
