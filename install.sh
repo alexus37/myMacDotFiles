@@ -62,3 +62,28 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 
+echo "Installing git town"
+curl -LO https://git-town.com/install.sh"
+chmod +x install.sh
+./install.sh
+chmod +x  ~/.local/bin/git-town
+
+echo "Setting up git town"
+git config --global alias.append "town append"
+git config --global alias.compress "town compress"
+git config --global alias.contribute "town contribute"
+git config --global alias.diff-parent "town diff-parent"
+git config --global alias.hack "town hack"
+git config --global alias.kill "town kill"
+git config --global alias.observe "town observe"
+git config --global alias.park "town park"
+git config --global alias.prepend "town prepend"
+git config --global alias.propose "town propose"
+git config --global alias.rename-branch "town rename-branch"
+git config --global alias.repo "town repo"
+git config --global alias.set-parent "town set-parent"
+git config --global alias.ship "town ship"
+git config --global alias.sync "town sync"
+git config git-town.hosting-platform github
+
+echo "Install dot files was successful!"
