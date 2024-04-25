@@ -15,10 +15,6 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custo
 echo "Installing FZF"
 $HOME/.fzf/install --bin
 
-echo "Installing thefuck"
-if [[ "$(command -v pip3)" ]]; then     
-    pip3 install --user thefuck; 
-fi 
 
 
 echo "Install nerd font"
@@ -41,16 +37,6 @@ sudo apt install ruby-dev -y
 # install npm require for lsp 
 curl https://www.npmjs.com/install.sh | sudo sh
 
-git clone https://github.com/alexus37/nvim.git $HOME/.config/nvim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-
-./nvim.appimage --appimage-extract
-./squashfs-root/AppRun --version
-
-# Optional: exposing nvim globally.
-sudo mv squashfs-root /
-sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 # git settings
 git config pull.rebase false
@@ -63,9 +49,9 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
 
 echo "Installing git town"
-curl -LO https://git-town.com/install.sh"
-chmod +x install.sh
-./install.sh
+curl -Lo install_git_town.sh "https://git-town.com/install.sh"
+chmod +x install_git_town.sh
+sh ./install_git_town.sh
 chmod +x  ~/.local/bin/git-town
 
 echo "Setting up git town"
