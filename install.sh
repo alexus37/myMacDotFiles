@@ -71,5 +71,6 @@ git config --global alias.set-parent "town set-parent"
 git config --global alias.ship "town ship"
 git config --global alias.sync "town sync"
 git config git-town.hosting-platform github
+git config git-town.sync-feature-strategy rebase
 
 echo "Install dot files was successful!"
