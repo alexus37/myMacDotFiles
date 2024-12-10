@@ -82,3 +82,17 @@ if [[ -r "$HOME/.rvm/scripts/rvm" ]]; then
   source $HOME/.rvm/scripts/rvm
 fi
 eval "$(github-copilot-cli alias -- "$0")"
+
+# bun completions
+[ -s "/Users/ax/.bun/_bun" ] && source "/Users/ax/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# github go proxy
+export GOPROXY=https://goproxy.githubapp.com/mod,https://proxy.golang.org/,direct
+export GOPRIVATE=
+export GONOPROXY=
+export GONOSUMDB='github.com/github/*'
+export CODESPACES_BROWSER_OPEN_OPT_OUT=1
