@@ -1,6 +1,24 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
+    "key": "cmd+shift+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+shift+c",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+c",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u0003"
+    },
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+n",
     "command": "-workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
@@ -161,7 +179,7 @@
     "when": "inQuickOpen && inRecentFilesPicker"
   },
   {
-    "key": "ctrl+r",
+    "key": "cmd+r",
     "command": "workbench.action.terminal.sendSequence",
     "args": { "text": "\u0012" },
     "when": "terminalFocus"
@@ -185,5 +203,48 @@
     "key": "ctrl+shift+r",
     "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
     "when": "inQuickOpen && inRecentFilesPicker"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "alt+\\",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   }
 ]
