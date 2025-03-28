@@ -49,6 +49,4 @@ echo "yabai configuration loaded.."
 # add the following to the end of your yabairc to have it launch automatically when yabai starts.
 # make sure the limelight binary is added somewhere in your $PATH
 
-# kill any existing limelight process if one exists, before we launch a new one
-killall limelight &> /dev/null
-limelight &> /dev/null &
+borders active_color=0xfc43ff64 inactive_color=0x00000000 width=5.0 &
